@@ -61,21 +61,21 @@ class AgentsFarm < Formula
 
   def install
     virtualenv_install_with_resources
+    bin.install_symlink bin/"agents-farm" => "af"
   end
 
   def caveats
     <<~EOS
-      Try it with fake data:  agents-farm --demo
+      Try it with fake data:  af --demo
       agents-farm only reads your Claude Code files. It never changes them.
 
-      A short name is not installed, so it cannot clash with another command.
-      If you want one, add this to your shell config:
-        alias af=agents-farm
+      The short name af is a link made by Homebrew next to agents-farm.
     EOS
   end
 
   test do
     assert_match version.to_s, shell_output("#{bin}/agents-farm --version")
+    assert_match version.to_s, shell_output("#{bin}/af --version")
     assert_match "usage", shell_output("#{bin}/agents-farm --help").downcase
   end
 end
