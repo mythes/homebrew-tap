@@ -3,8 +3,8 @@ class AgentsFarm < Formula
 
   desc "Terminal dashboard for Claude Code agents: status, context and limits"
   homepage "https://github.com/mythes/agents-farm"
-  url "https://github.com/mythes/agents-farm/archive/refs/tags/v0.7.0.tar.gz"
-  sha256 "258280e60fbbb7eca1c9a0f44fa0607aff7d10d70f8cb754bd5128114957919e"
+  url "https://github.com/mythes/agents-farm/archive/refs/tags/v0.8.0.tar.gz"
+  sha256 "4debafcdd88736461b8d38d93c8391ef9f1f103a5a83c924d67382b141279992"
   license "MIT"
 
   depends_on "python@3.12"
